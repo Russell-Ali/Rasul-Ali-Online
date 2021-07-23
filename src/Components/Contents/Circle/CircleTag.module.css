@@ -1,4 +1,5 @@
 .circleTagH1 {
+  color: #2b2b2b;
   position: absolute;
   width: 200px;
   height: 60px;
@@ -6,6 +7,7 @@
   left: 0px;
   font-size: 20px;
   line-height: 20px;
+  font-weight: 300;
   text-align: center;
   padding: 20px 0;
   margin: 0;

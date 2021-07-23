@@ -1,0 +1,8 @@
+.wrapper {
+  letter-spacing: 1px;
+  position: absolute;
+  height: 50px;
+  width: 100px;
+  top: 25px;
+  left: 100px;
+}

@@ -1,34 +1,25 @@
 import Circle from "./Circle";
-import CircleTag from "./CircleTag";
 import styles from "./CircleWrapper.module.css";
 
 const CircleWrapper = () => {
   return (
     <div className={styles.circleWrapperDiv}>
-      <Circle>
-        <CircleTag />
-      </Circle>
-      <Circle>
-        <CircleTag />
-      </Circle>
-      <Circle>
-        <CircleTag />
-      </Circle>
-      <Circle>
-        <CircleTag />
-      </Circle>
-      <Circle>
-        <CircleTag />
-      </Circle>
-      <Circle>
-        <CircleTag />
-      </Circle>
-      <Circle>
-        <CircleTag />
-      </Circle>
-      <Circle>
-        <CircleTag />
-      </Circle>
+      <Circle></Circle>
+      <Circle></Circle>
+      <Circle></Circle>
+      <Circle></Circle>
+      <Circle Tag="Whatever 5"></Circle>
+      <Circle Tag="Whatever 6"></Circle>
+      <Circle Tag="Whatever 7"></Circle>
+      <Circle Tag="Whatever 8"></Circle>
+      <Circle></Circle>
+      <Circle></Circle>
+      <Circle></Circle>
+      <Circle></Circle>
+      <Circle></Circle>
+      <Circle></Circle>
+      <Circle></Circle>
+      <Circle></Circle>
     </div>
   );
 };

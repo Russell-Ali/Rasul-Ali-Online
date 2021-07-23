@@ -1,0 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Zen+Loop:ital@0;1&display=swap");
+
+.aboutDiv {
+  font-family: "Zen Loop", cursive;
+  min-height: calc(100vh - 150px);
+}

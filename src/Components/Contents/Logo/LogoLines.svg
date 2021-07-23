@@ -1,0 +1,25 @@
+<svg width="158" height="204" viewBox="0 0 158 204" fill="none">
+      <g id="Lines">
+        <line
+          id="Y"
+          x1="2.50066"
+          y1="203"
+          x2="2.50065"
+          y2="1"
+          stroke="#2b2b2b"
+          stroke-width="5"
+        />
+        <path
+          id="Z-down"
+          d="M110.974 145.612L153.588 201.772"
+          stroke="#2b2b2b"
+          stroke-width="5"
+        />
+        <path
+          id="Z-up"
+          d="M3.47681 2.1417L23.4402 28.451"
+          stroke="#2b2b2b"
+          stroke-width="5"
+        />
+      </g>
+    </svg>

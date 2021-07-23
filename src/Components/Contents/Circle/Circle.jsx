@@ -1,10 +1,15 @@
 import styles from "./Circle.module.css";
-const Circle = () => {
+import CircleTag from "./CircleTag";
+const Circle = (props) => {
   return (
     <>
-      <div className={styles.circleDiv}></div>
+      <div className={styles.circleDiv}>
+        <CircleTag tag={props.Tag} />
+      </div>
     </>
   );
 };
-
+Circle.defaultProps = {
+  Tag: "_blank",
+};
 export default Circle;

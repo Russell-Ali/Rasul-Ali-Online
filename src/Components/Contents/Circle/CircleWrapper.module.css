@@ -1,9 +1,9 @@
 .circleWrapperDiv {
   position: relative;
   margin: 0 10%;
+  margin-bottom: 60px;
   width: 80%;
   height: calc(100% - 100px);
-  background: rgba(255, 255, 0, 0.4);
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
