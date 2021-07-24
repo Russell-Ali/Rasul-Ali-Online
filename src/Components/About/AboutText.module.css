@@ -1,40 +1,72 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-body {
+body,
+p,
+h1,
+div {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   --txt-clr: #2b2b2b;
 }
 
 .textWrapper {
+  font-family: "Dancing Script", cursive;
   position: absolute;
   top: 100px;
   width: 100%;
-}
-.paragraph {
-  position: absolute;
-  left: 275px;
-  width: 400px;
-  height: 176px;
-  top: 160px;
-  color: var(--txt-clr);
-  font-size: 20px;
-}
-.paragraph2 {
-  font-size: 20px;
-  position: absolute;
-  left: 275px;
-  width: 400px;
-  top: calc(160px + 175px);
-  color: var(--txt-clr);
+  height: calc(100% + 100px);
 }
 .heading {
-  line-height: 60px;
+  font-weight: 500;
   font-size: 40px;
   font-style: italic;
   position: absolute;
   left: 275px;
-  top: 70px;
+  top: calc(25px + 100px - 24px); /*121px*/
   color: var(--txt-clr);
 }
+.available {
+  position: absolute;
+  border-radius: 15px;
+  text-align: center;
+  width: 200px;
+  height: 50px;
+  padding: 13px 0;
+  left: calc(275px + 286px + 25px);
+  top: 100px;
+  background: rgba(255, 165, 0, 0.4);
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+}
+.availableWrapper {
+  background: transparent;
+  width: 210px;
+  height: 60px;
+  position: absolute;
+  left: calc(275px + 286px + 20px);
+  top: 95px;
+  border: rgba(255, 165, 0, 0.4) 3px solid;
+  border-radius: 17px;
+}
+.paragraphBig {
+  font-weight: 400;
+  position: absolute;
+  left: 275px;
+  width: 400px;
+  top: calc(250px + 12px); /*262px*/
+  color: var(--txt-clr);
+  font-size: 20px;
+}
+.paragraphMid {
+  font-size: 20px;
+  position: absolute;
+  left: 275px;
+  width: 400px;
+  top: calc(263px + 192px + 50px); /*505px*/
+  color: var(--txt-clr);
+}
+
 .divider {
   position: absolute;
   left: 112.5px;
@@ -43,13 +75,12 @@ body {
   width: 25px;
   outline: 1px solid var(--txt-clr);
 }
-.paragraph3 {
+.paragraphMail {
   text-align: center;
   font-family: "Poppins", sans-serif;
   position: absolute;
-  line-height: 10px;
   left: 25px;
-  top: 255px;
+  top: calc(250px + 25px - 12px); /*263px*/
   width: 200px;
   color: var(--txt-clr);
 }
@@ -61,19 +92,19 @@ body {
   width: 25px;
   outline: 1px solid var(--txt-clr);
 }
-.paragraph4 {
+.paragraphSocial {
   margin: 0;
   padding: 0;
-  margin-top: 25px;
   position: absolute;
   top: 300px;
+  margin-top: 12px;
   left: 75px;
   width: 100px;
   height: 100px;
   text-align: center;
   font-family: "Poppins", sans-serif;
 }
-.paragraph4 a {
+.paragraphSocial a {
   text-decoration: none;
   color: var(--txt-clr);
 }
