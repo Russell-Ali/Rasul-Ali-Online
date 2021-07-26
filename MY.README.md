@@ -12,4 +12,5 @@ Root.js does "App.js"s work now.
 Render Everything inside Root.jsx for more cleaner Code.
 Root.jsx is rendering inside App.js and of course it renders in index.js
 
+Make Page responsive
 Work On animations and details
