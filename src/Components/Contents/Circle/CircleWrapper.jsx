@@ -8,10 +8,6 @@ const CircleWrapper = () => {
       <Circle></Circle>
       <Circle></Circle>
       <Circle></Circle>
-      <Circle Tag="Whatever 5"></Circle>
-      <Circle Tag="Whatever 6"></Circle>
-      <Circle Tag="Whatever 7"></Circle>
-      <Circle Tag="Whatever 8"></Circle>
       <Circle></Circle>
       <Circle></Circle>
       <Circle></Circle>

@@ -13,9 +13,9 @@ div {
 .textWrapper {
   font-family: "Dancing Script", cursive;
   position: absolute;
-  top: 100px;
+  top: 0px;
   width: 100%;
-  height: calc(100% + 100px);
+  min-height: 100vh;
 }
 .heading {
   font-size: 40px;
@@ -26,6 +26,9 @@ div {
   color: var(--txt-clr);
 }
 .available {
+  outline: none;
+  border: none;
+  cursor: pointer;
   position: absolute;
   border-radius: 15px;
   text-align: center;
@@ -74,6 +77,7 @@ div {
   outline: 1px solid var(--txt-clr);
 }
 .paragraphMail {
+  cursor: pointer;
   text-align: center;
   font-family: "Poppins", sans-serif;
   position: absolute;
@@ -105,4 +109,72 @@ div {
 .paragraphSocial a {
   text-decoration: none;
   color: var(--txt-clr);
+}
+@media screen and (max-width: 540px) {
+  .heading,
+  .paragraphBig,
+  .paragraphMid,
+  .available,
+  .availableWrapper {
+    display: none;
+  }
+  .divider {
+    display: none;
+  }
+  .paragraphMail {
+    top: 25px;
+    left: initial;
+    right: 25px;
+  }
+  .divider2 {
+    top: calc(50px + 24px);
+    left: initial;
+    right: 75px;
+    width: 100px;
+  }
+  .paragraphSocial {
+    inset: initial;
+    right: 75px;
+    top: calc(200px - 44px - 50px);
+  }
+  .heading {
+    display: initial;
+    inset: initial;
+    top: 250px;
+    left: 25px;
+    font-size: 32px;
+  }
+  .paragraphBig {
+    display: initial;
+    inset: initial;
+    top: 325px;
+    left: 25px;
+  }
+  .paragraphMid {
+    display: initial;
+    inset: initial;
+    top: calc(300px + 192px + 50px);
+    left: 25px;
+    padding-bottom: 50px;
+  }
+  .available {
+    display: initial;
+    inset: initial;
+    top: 250px;
+    right: 25px;
+    width: 160px;
+    height: 40px;
+    font-size: 14px;
+    padding: 10px 0;
+    border-radius: 10px;
+  }
+  .availableWrapper {
+    display: initial;
+    inset: initial;
+    top: 245px;
+    right: 20px;
+    width: 170px;
+    height: 50px;
+    border-radius: 15px;
+  }
 }

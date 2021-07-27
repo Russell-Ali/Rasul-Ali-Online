@@ -4,7 +4,7 @@ const AboutText = () => {
     <div className={styles.textWrapper}>
       <h1 className={styles.heading}>Lorem, ipsum dolor.</h1>
       <div className={styles.availableWrapper}></div>
-      <h1 className={styles.available}>Currently available</h1>
+      <button className={styles.available}>Currently available</button>
       <p className={styles.paragraphBig}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
         omnis, natus enim dolore corrupti assumenda veritatis distinctio illo
