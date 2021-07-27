@@ -1,8 +1,15 @@
 .wrapper {
+  display: flex;
+  flex-direction: column;
   letter-spacing: 1px;
   position: absolute;
-  height: 50px;
-  width: 100px;
   top: 25px;
   left: 100px;
+}
+@media screen and (max-width: 540px) {
+  .wrapper {
+    left: initial;
+    right: 25px;
+    text-align: right;
+  }
 }

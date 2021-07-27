@@ -8,3 +8,10 @@
   justify-content: center;
   flex-wrap: wrap;
 }
+@media screen and (max-width: 540px) {
+  .circleWrapperDiv {
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+  }
+}

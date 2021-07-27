@@ -13,3 +13,16 @@
   margin: 0;
   box-sizing: border-box;
 }
+@media screen and (max-width: 540px) {
+  .circleTagH1 {
+    line-height: initial;
+    height: initial;
+    padding: 0;
+    top: calc(100px - 24px);
+    left: 100%;
+    margin-left: 25px;
+    font-weight: 500;
+    font-size: 32px;
+    text-align: left;
+  }
+}

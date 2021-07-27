@@ -7,8 +7,8 @@ const Footer = () => {
     <div className={styles.footer}>
       <h1 className={styles.name}>By Rasul Ali</h1>
       <h1 className={styles.date}>__/__/2021</h1>
-      <div className={styles.arrowDiv} onClick={scrollToTop}>
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+      <div onClick={scrollToTop} className={styles.arrowDiv}>
+        <svg viewBox="0 0 20 20" fill="none">
           <path
             className={styles.arrow}
             fill-rule="evenodd"

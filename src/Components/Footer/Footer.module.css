@@ -2,35 +2,37 @@
 
 .footer {
   position: relative;
-  width: calc(100% - 25px);
+  bottom: 25px;
   left: 25px;
-  border-top: 1px solid #2b2b2b;
+  width: calc(100% - 50px);
+  border: 1px solid #2b2b2b;
+  border-radius: 30px;
   height: 49px;
-  border-radius: 0px 80px 0px 0px / 0px 50px 0px 48px;
   display: flex;
   align-items: center;
 }
 .name {
   font-family: "Zen Loop", cursive;
   position: absolute;
-  left: 0;
+  left: 15px;
   color: #2b2b2b;
   font-size: 25px;
   line-height: 20px;
-  font-weight: 300;
 }
 .date {
+  width: fit-content;
   position: absolute;
-  right: 25px;
+  right: 15px;
   font-size: 16px;
-  font-weight: 200;
+  font-weight: 400;
   color: #2b2b2b;
 }
 
 .arrowDiv {
   animation: float 2s ease infinite;
   cursor: pointer;
-  left: calc(50% - 10px);
+  left: 50%;
+  transform: translateX(-50%);
   position: absolute;
   width: 20px;
   height: 20px;
@@ -49,5 +51,19 @@
   }
   100% {
     transform: translateY(-1px);
+  }
+}
+@media screen and (max-width: 540px) {
+  .footer {
+    margin-top: 50px;
+  }
+  .date {
+    left: calc(30px + 15px + 47px + 25px);
+  }
+  .arrowDiv {
+    left: calc(100% - 45px);
+    transform: none;
+    width: 25px;
+    height: 25px;
   }
 }
