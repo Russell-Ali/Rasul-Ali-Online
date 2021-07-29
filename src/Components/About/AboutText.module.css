@@ -77,14 +77,18 @@ div {
   outline: 1px solid var(--txt-clr);
 }
 .paragraphMail {
+  user-select: none;
+  background-color: rgba(43, 43, 43, 0.2);
   cursor: pointer;
   text-align: center;
   font-family: "Poppins", sans-serif;
   position: absolute;
-  left: 25px;
-  top: calc(250px + 25px - 12px); /*263px*/
-  width: 200px;
+  left: 20px;
+  top: calc(250px + 25px - 13px); /*263px*/
+  width: 210px;
+  height: 25px;
   color: var(--txt-clr);
+  border-radius: 15px;
 }
 .divider2 {
   position: absolute;
@@ -95,6 +99,8 @@ div {
   outline: 1px solid var(--txt-clr);
 }
 .paragraphSocial {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
   position: absolute;
@@ -110,7 +116,7 @@ div {
   text-decoration: none;
   color: var(--txt-clr);
 }
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 574px) {
   .heading,
   .paragraphBig,
   .paragraphMid,
@@ -122,6 +128,7 @@ div {
     display: none;
   }
   .paragraphMail {
+    user-select: unset;
     top: 25px;
     left: initial;
     right: 25px;
@@ -138,10 +145,12 @@ div {
     top: calc(200px - 44px - 50px);
   }
   .heading {
+    width: 110px;
+    text-align: center;
     display: initial;
     inset: initial;
-    top: 250px;
-    left: 25px;
+    top: calc(250px - 25px);
+    left: calc(25px + 45px);
     font-size: 32px;
   }
   .paragraphBig {
@@ -161,7 +170,7 @@ div {
     display: initial;
     inset: initial;
     top: 250px;
-    right: 25px;
+    right: 45px;
     width: 160px;
     height: 40px;
     font-size: 14px;
@@ -172,7 +181,7 @@ div {
     display: initial;
     inset: initial;
     top: 245px;
-    right: 20px;
+    right: 40px;
     width: 170px;
     height: 50px;
     border-radius: 15px;

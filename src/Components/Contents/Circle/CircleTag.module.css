@@ -13,8 +13,9 @@
   margin: 0;
   box-sizing: border-box;
 }
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 574px) {
   .circleTagH1 {
+    width: fit-content;
     line-height: initial;
     height: initial;
     padding: 0;
