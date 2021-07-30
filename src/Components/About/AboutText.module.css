@@ -77,7 +77,6 @@ div {
   outline: 1px solid var(--txt-clr);
 }
 .paragraphMail {
-  user-select: none;
   background-color: rgba(43, 43, 43, 0.2);
   cursor: pointer;
   text-align: center;
@@ -87,8 +86,13 @@ div {
   top: calc(250px + 25px - 13px); /*263px*/
   width: 210px;
   height: 25px;
-  color: var(--txt-clr);
   border-radius: 15px;
+}
+#clicked {
+  background: transparent;
+  border: 2px solid #29bf12;
+  color: #29bf12;
+  line-height: 21px;
 }
 .divider2 {
   position: absolute;
@@ -128,7 +132,6 @@ div {
     display: none;
   }
   .paragraphMail {
-    user-select: unset;
     top: 25px;
     left: initial;
     right: 25px;

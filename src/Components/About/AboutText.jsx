@@ -6,31 +6,45 @@ const AboutText = () => {
     message: "Click To Copy",
     click: "Copied",
   };
-
+  let MailStyle;
+  if (navigator.clipboard && window.isSecureContext) {
+    MailStyle = "none";
+  } else {
+    MailStyle = "all";
+  }
+  const [isClicked, setIsClicked] = useState("");
   const [isHover, setIsHover] = useState(0);
   function clicked() {
-    console.log("clicked");
-    setIsHover(2);
-    navigator.clipboard.writeText(contactMe.mail);
-    setTimeout(() => setIsHover(0), 500);
+    if (navigator.clipboard && window.isSecureContext) {
+      console.log("🤩clicked");
+      setIsHover(2);
+      setIsClicked("clicked");
+      navigator.clipboard.writeText(contactMe.mail);
+      setTimeout(() => {
+        setIsHover(0);
+        setIsClicked("");
+      }, 500);
+    } else {
+      console.log("nope");
+    }
   }
   function hovering() {
-    console.log("hovering...");
     if (window.innerHeight <= 574) {
-    } else {
+    } else if (navigator.clipboard && window.isSecureContext) {
+      console.log("😃hovering...");
       setTimeout(() => setIsHover(1), 100);
     }
   }
   function left() {
-    console.log("left");
     if (window.innerHeight <= 574) {
-    } else {
+    } else if (navigator.clipboard && window.isSecureContext) {
+      console.log("left😢");
       setTimeout(() => setIsHover(0), 300);
     }
   }
   return (
     <div className={styles.textWrapper}>
-      <h1 className={styles.heading}>Rəsul Ali</h1>
+      <h1 className={styles.heading}>Rasul Ali</h1>
       <div className={styles.availableWrapper}></div>
       <button className={styles.available}>Currently available</button>
       <p className={styles.paragraphBig}>
@@ -48,6 +62,10 @@ const AboutText = () => {
       </p>
       <span className={styles.divider}></span>
       <p
+        id={styles[isClicked]}
+        style={{
+          userSelect: MailStyle,
+        }}
         className={styles.paragraphMail}
         onClick={clicked}
         onMouseEnter={hovering}
