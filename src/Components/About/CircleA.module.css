@@ -1,4 +1,5 @@
 .circleDiv {
+  position: absolute;
   top: 25px;
   margin: 25px;
   position: relative;
@@ -6,11 +7,20 @@
   height: 200px;
   border: 0px solid black;
   border-radius: 50%;
-  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.14),
-    0px 1px 10px 0px rgba(0, 0, 0, 0.12), 0px 2px 4px -1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 24px 38px 3px rgba(0, 0, 0, 0.14),
+    0px 9px 46px 8px rgba(0, 0, 0, 0.12), 0px 11px 15px -7px rgba(0, 0, 0, 0.2);
 }
 @media screen and (max-width: 574px) {
   .circleDiv {
+    margin: 0;
     top: 50px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
   }
+}
+.circleImg {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
 }

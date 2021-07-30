@@ -132,20 +132,22 @@ div {
     display: none;
   }
   .paragraphMail {
-    top: 25px;
+    top: calc(250px + 25px);
     left: initial;
-    right: 25px;
+    left: 50%;
+    transform: translateX(-50%);
   }
   .divider2 {
-    top: calc(50px + 24px);
-    left: initial;
-    right: 75px;
+    top: calc(320px + 75px);
+    left: 50%;
+    transform: translateX(-50%);
     width: 100px;
   }
   .paragraphSocial {
     inset: initial;
-    right: 75px;
-    top: calc(200px - 44px - 50px);
+    top: calc(395px + 0px);
+    left: 50%;
+    transform: translateX(-50%);
   }
   .heading {
     width: 110px;
@@ -153,27 +155,34 @@ div {
     display: initial;
     inset: initial;
     top: calc(250px - 25px);
-    left: calc(25px + 45px);
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 32px;
+    background-blend-mode: lighten;
   }
   .paragraphBig {
+    text-align: center;
     display: initial;
     inset: initial;
-    top: 325px;
+    top: calc(320px + 75px + 125px);
     left: 25px;
+    width: calc(100% - 50px);
   }
   .paragraphMid {
+    text-align: center;
     display: initial;
     inset: initial;
-    top: calc(300px + 192px + 50px);
+    top: calc(395px + 240px + 25px + 125px);
     left: 25px;
+    width: calc(100% - 50px);
     padding-bottom: 50px;
   }
   .available {
     display: initial;
     inset: initial;
-    top: 250px;
-    right: 45px;
+    top: calc(250px + 75px);
+    left: 50%;
+    transform: translateX(-50%);
     width: 160px;
     height: 40px;
     font-size: 14px;
@@ -183,8 +192,9 @@ div {
   .availableWrapper {
     display: initial;
     inset: initial;
-    top: 245px;
-    right: 40px;
+    top: calc(245px + 75px);
+    left: 50%;
+    transform: translateX(-50%);
     width: 170px;
     height: 50px;
     border-radius: 15px;
