@@ -25,32 +25,7 @@ div {
   top: calc(25px + 100px - 24px); /*121px*/
   color: var(--txt-clr);
 }
-.available {
-  outline: none;
-  border: none;
-  cursor: pointer;
-  position: absolute;
-  border-radius: 15px;
-  text-align: center;
-  width: 200px;
-  height: 50px;
-  padding: 13px 0;
-  left: calc(275px + 286px + 25px);
-  top: 100px;
-  background: rgba(255, 165, 0, 0.4);
-  font-size: 16px;
-  font-family: "Poppins", sans-serif;
-}
-.availableWrapper {
-  background: transparent;
-  width: 210px;
-  height: 60px;
-  position: absolute;
-  left: calc(275px + 286px + 20px);
-  top: 95px;
-  border: rgba(255, 165, 0, 0.4) 3px solid;
-  border-radius: 17px;
-}
+
 .paragraphBig {
   position: absolute;
   left: 275px;
@@ -121,13 +96,6 @@ div {
   color: var(--txt-clr);
 }
 @media screen and (max-width: 574px) {
-  .heading,
-  .paragraphBig,
-  .paragraphMid,
-  .available,
-  .availableWrapper {
-    display: none;
-  }
   .divider {
     display: none;
   }
@@ -150,6 +118,7 @@ div {
     transform: translateX(-50%);
   }
   .heading {
+    color: #000;
     width: 110px;
     text-align: center;
     display: initial;
@@ -158,7 +127,11 @@ div {
     left: 50%;
     transform: translateX(-50%);
     font-size: 32px;
-    background-blend-mode: lighten;
+    text-shadow: 0 1px 0 #e0e0e0, 0 2px 0 #dddddd, 0 3px 0 #cfcfcf,
+      0 4px 0 #cdcdcd, 0 5px 0 #bebebe, 0 6px 1px rgba(20, 20, 20, 0.1),
+      0 0 5px rgba(20, 20, 20, 0.1), 0 1px 3px rgba(20, 20, 20, 0.3),
+      0 3px 5px rgba(20, 20, 20, 0.2), 0 5px 10px rgba(20, 20, 20, 0.25),
+      0 10px 10px rgba(20, 20, 20, 0.2), 0 20px 20px rgba(20, 20, 20, 0.15);
   }
   .paragraphBig {
     text-align: center;
@@ -176,27 +149,5 @@ div {
     left: 25px;
     width: calc(100% - 50px);
     padding-bottom: 50px;
-  }
-  .available {
-    display: initial;
-    inset: initial;
-    top: calc(250px + 75px);
-    left: 50%;
-    transform: translateX(-50%);
-    width: 160px;
-    height: 40px;
-    font-size: 14px;
-    padding: 10px 0;
-    border-radius: 10px;
-  }
-  .availableWrapper {
-    display: initial;
-    inset: initial;
-    top: calc(245px + 75px);
-    left: 50%;
-    transform: translateX(-50%);
-    width: 170px;
-    height: 50px;
-    border-radius: 15px;
   }
 }

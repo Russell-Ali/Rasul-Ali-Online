@@ -16,4 +16,3 @@ Root.jsx is rendering inside App.js and of course it renders in index.js
 
 Work On animations and details
 Add Dark Mode
-For Mobile view work on contrast of Heading that overlaps Image

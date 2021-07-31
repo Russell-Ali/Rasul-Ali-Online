@@ -1,5 +1,6 @@
 import styles from "./AboutText.module.css";
 import { useState } from "react";
+import Available from "./Available/Available";
 const AboutText = () => {
   const contactMe = {
     mail: "rasul.mail.00@mail.com",
@@ -7,6 +8,7 @@ const AboutText = () => {
     click: "Copied",
   };
   let MailStyle;
+  const [Width] = useState(window.innerWidth);
   if (navigator.clipboard && window.isSecureContext) {
     MailStyle = "none";
   } else {
@@ -29,14 +31,14 @@ const AboutText = () => {
     }
   }
   function hovering() {
-    if (window.innerHeight <= 574) {
+    if (Width <= 574) {
     } else if (navigator.clipboard && window.isSecureContext) {
       console.log("😃hovering...");
       setTimeout(() => setIsHover(1), 100);
     }
   }
   function left() {
-    if (window.innerHeight <= 574) {
+    if (Width <= 574) {
     } else if (navigator.clipboard && window.isSecureContext) {
       console.log("left😢");
       setTimeout(() => setIsHover(0), 300);
@@ -45,8 +47,7 @@ const AboutText = () => {
   return (
     <div className={styles.textWrapper}>
       <h1 className={styles.heading}>Rasul Ali</h1>
-      <div className={styles.availableWrapper}></div>
-      <button className={styles.available}>Currently available</button>
+      <Available />
       <p className={styles.paragraphBig}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
         omnis, natus enim dolore corrupti assumenda veritatis distinctio illo
