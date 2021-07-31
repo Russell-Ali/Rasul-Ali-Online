@@ -1,6 +1,28 @@
+import { useEffect, useRef } from "react";
+
+import gsap from "gsap";
+
 import styles from "./LogoSvg.module.css";
 
 const LogoSvg = () => {
+  const ref = useRef(null);
+  useEffect(() => {
+    const Circle = ref.current;
+    let tlCircle = gsap.timeline();
+    tlCircle
+      .from(Circle, {
+        x: "+=20",
+        y: "+=20",
+        duration: 1,
+        ease: "none",
+      })
+      .from(Circle, {
+        x: "-=20",
+        y: "-=20",
+        duration: 1,
+        ease: "none",
+      });
+  });
   return (
     <svg
       width="220"
@@ -35,6 +57,7 @@ const LogoSvg = () => {
           fill="white"
           stroke="black"
           strokeWidth="5"
+          ref={ref}
         />
       </g>
     </svg>

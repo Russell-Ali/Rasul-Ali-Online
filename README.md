@@ -14,5 +14,6 @@ Root.js does "App.js"s work now.
 Render Everything inside Root.jsx for more cleaner Code.
 Root.jsx is rendering inside App.js and of course it renders in index.js
 
-Work On animations and details
+Keep working on animations of logo and available button;
+import more 3d effects one for available button definitely
 Add Dark Mode
