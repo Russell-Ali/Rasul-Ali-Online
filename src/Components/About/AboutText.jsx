@@ -34,7 +34,7 @@ const AboutText = () => {
     if (Width <= 574) {
     } else if (navigator.clipboard && window.isSecureContext) {
       console.log("😃hovering...");
-      setTimeout(() => setIsHover(1), 100);
+      setIsHover(1);
     }
   }
   function left() {

@@ -1,7 +1,10 @@
 import styles from "./Footer.module.css";
 const Footer = () => {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   };
   return (
     <div className={styles.footer}>
