@@ -70,15 +70,23 @@ export const CircleSvg = () => {
 };
 export const AroundSvg = () => {
   const ref = useRef();
+  const ref2 = useRef();
   const [Length, setLength] = useState("");
-  const [animeLength, setAnimeLength] = useState(Length);
   useEffect(() => {
     const pathSvg = ref.current;
+    const aroundSvg = ref2.current;
     const length = pathSvg.getTotalLength();
     setLength(length);
-    const tlPath = gsap.timeline();
-    let x = 99;
-    setAnimeLength(Length * ((100 - x) / 100));
+    const tlPath = gsap.timeline({ repeat: -1 });
+    tlPath
+      .to(pathSvg, {
+        strokeDashoffset: Length * -0.9,
+        duration: 1,
+      })
+      .to(aroundSvg, {
+        rotationZ: 360,
+        duration: 3.6,
+      });
   });
 
   return (
@@ -88,6 +96,7 @@ export const AroundSvg = () => {
       viewBox="0 0 220 220"
       fill="none"
       className={styles.around}
+      ref={ref2}
     >
       <g id="Frame 1">
         <path
@@ -97,7 +106,7 @@ export const AroundSvg = () => {
           stroke="black"
           strokeWidth="3"
           strokeDasharray={Length}
-          strokeDashoffset={animeLength}
+          strokeDashoffset={0}
         />
       </g>
     </svg>
