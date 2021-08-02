@@ -61,7 +61,7 @@ export const CircleSvg = () => {
         cx="110.524"
         cy="85.9996"
         r="75"
-        fill="rgb(255, 255, 255, 0.9)"
+        fill="rgba(248, 248, 255, 0.9)"
         stroke="black"
         strokeWidth="5"
       />
@@ -77,7 +77,8 @@ export const AroundSvg = () => {
     const length = pathSvg.getTotalLength();
     setLength(length);
     const tlPath = gsap.timeline();
-    // tlPath.to(window, {setAnimeLength: });
+    let x = 99;
+    setAnimeLength(Length * ((100 - x) / 100));
   });
 
   return (

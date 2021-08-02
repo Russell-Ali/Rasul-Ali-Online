@@ -1,7 +1,19 @@
 .canvas {
-  min-width: 100vw;
+  width: 100vw;
   min-height: 100vh;
   position: relative;
   top: 0;
   left: 0;
+}
+body::-webkit-scrollbar {
+  width: 6px;
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(39, 39, 39);
+  border-radius: 3px;
 }
