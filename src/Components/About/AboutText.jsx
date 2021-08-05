@@ -1,6 +1,6 @@
 import styles from "./AboutText.module.css";
 import { useState } from "react";
-import Available from "./Available/Available";
+import { HoverDiv } from "./Three/Three";
 const AboutText = () => {
   const contactMe = {
     mail: "rasul.mail.00@mail.com",
@@ -47,7 +47,7 @@ const AboutText = () => {
   return (
     <div className={styles.textWrapper}>
       <h1 className={styles.heading}>Rasul Ali</h1>
-      <Available />
+      <HoverDiv />
       <p className={styles.paragraphBig}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
         omnis, natus enim dolore corrupti assumenda veritatis distinctio illo

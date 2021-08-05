@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Zen+Loop:ital@0;1&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Tangerine&family=WindSong&display=swap");
 .footer {
   position: relative;
   bottom: 25px;
@@ -12,12 +11,12 @@
   align-items: center;
 }
 .name {
-  font-family: "Zen Loop", cursive;
+  font-family: "Tangerine", cursive;
   position: absolute;
   left: 15px;
   color: #2b2b2b;
   font-size: 25px;
-  line-height: 20px;
+  cursor: default;
 }
 .date {
   width: fit-content;
@@ -58,7 +57,8 @@
     margin-top: 50px;
   }
   .date {
-    left: calc(30px + 15px + 47px + 25px);
+    word-spacing: -2px;
+    left: calc(30px + 15px + 47px + 20px);
   }
   .arrowDiv {
     left: calc(100% - 45px);

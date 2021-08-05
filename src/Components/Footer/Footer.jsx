@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <div className={styles.footer}>
       <h1 className={styles.name}>Rasul Ali</h1>
-      <h1 className={styles.date}>__/__/2021</h1>
+      <h1 className={styles.date}>3 Aug 2021</h1>
       <div onClick={scrollToTop} className={styles.arrowDiv}>
         <svg viewBox="0 0 20 20" fill="none">
           <path

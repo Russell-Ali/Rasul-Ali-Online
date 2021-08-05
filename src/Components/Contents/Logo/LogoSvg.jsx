@@ -61,7 +61,7 @@ export const CircleSvg = () => {
         cx="110.524"
         cy="85.9996"
         r="75"
-        fill="rgba(248, 248, 255, 0.9)"
+        fill="none"
         stroke="black"
         strokeWidth="5"
       />
@@ -71,24 +71,34 @@ export const CircleSvg = () => {
 export const AroundSvg = () => {
   const ref = useRef();
   const ref2 = useRef();
-  const [Length, setLength] = useState("");
   useEffect(() => {
     const pathSvg = ref.current;
     const aroundSvg = ref2.current;
-    const length = pathSvg.getTotalLength();
-    setLength(length);
-    const tlPath = gsap.timeline({ repeat: -1 });
+    const tlPath = gsap.timeline({ repeat: -1, repeatDelay: 3 });
+    const tlAround = gsap.timeline({ repeat: -1 });
+    tlAround.to(aroundSvg, {
+      rotateZ: "+=360",
+      duration: 6,
+      ease: "sine.inOut",
+    });
     tlPath
       .to(pathSvg, {
-        strokeDashoffset: Length * -0.9,
-        duration: 1,
+        strokeDashoffset: "+=419",
+        duration: 2,
+        ease: "linear",
       })
-      .to(aroundSvg, {
-        rotationZ: 360,
-        duration: 3.6,
+      .to(pathSvg, {
+        strokeDashoffset: "+=629",
+        duration: 2,
+        ease: "linear",
+      })
+      .to(pathSvg, {
+        strokeDashoffset: "+=210",
+        duration: 1,
+        ease: "linear",
+        delay: "-.1",
       });
   });
-
   return (
     <svg
       width="220"
@@ -103,10 +113,10 @@ export const AroundSvg = () => {
           ref={ref}
           className={styles.path}
           d="M10 110C10 136.522 20.5357 161.957 39.2893 180.711C58.043 199.464 83.4784 210 110 210C136.522 210 161.957 199.464 180.711 180.711C199.464 161.957 210 136.522 210 110C210 83.4784 199.464 58.043 180.711 39.2893C161.957 20.5357 136.522 10 110 10C83.4784 10 58.043 20.5357 39.2893 39.2893C20.5357 58.043 10 83.4784 10 110"
-          stroke="black"
+          stroke="#000000"
           strokeWidth="3"
-          strokeDasharray={Length}
-          strokeDashoffset={0}
+          strokeDasharray="628"
+          strokeDashoffset="210"
         />
       </g>
     </svg>

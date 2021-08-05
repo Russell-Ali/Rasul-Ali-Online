@@ -8,14 +8,10 @@ const CircleWrapper = () => {
       <Circle url="https://placeimg.com/200/200/arch" />
       <Circle url="https://placeimg.com/200/200/arch" />
       <Circle url="https://placeimg.com/200/200/arch" />
-      <Circle url="https://placeimg.com/200/200/arch" />
-      <Circle url="https://placeimg.com/200/200/arch" />
-      <Circle url="https://placeimg.com/200/200/arch" />
-      <Circle url="https://placeimg.com/200/200/arch" />
-      <Circle url="https://placeimg.com/200/200/arch" />
-      <Circle url="https://placeimg.com/200/200/arch" />
-      <Circle url="https://placeimg.com/200/200/arch" />
-      <Circle url="https://placeimg.com/200/200/arch" />
+      <Circle />
+      <Circle />
+      <Circle />
+      <Circle />
     </div>
   );
 };

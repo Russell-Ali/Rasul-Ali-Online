@@ -16,11 +16,9 @@ const Root = () => {
           <Route path="/about" component={About} />
         </Switch>
         <Route path="/" component={Footer} exact />
+        <Route path="/about" exact component={Three} />
       </Router>
     </div>
   );
 };
-/*
-        <Three /> 
-*/
 export default Root;

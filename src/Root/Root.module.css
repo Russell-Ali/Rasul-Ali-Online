@@ -4,6 +4,7 @@
   position: relative;
   top: 0;
   left: 0;
+  background: url(../Components/Contents/assets/linedpaper.png);
 }
 body::-webkit-scrollbar {
   width: 6px;

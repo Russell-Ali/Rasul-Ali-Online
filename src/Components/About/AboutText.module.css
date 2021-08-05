@@ -78,6 +78,7 @@ div {
   outline: 1px solid var(--txt-clr);
 }
 .paragraphSocial {
+  user-select: none;
   display: flex;
   flex-direction: column;
   margin: 0;
