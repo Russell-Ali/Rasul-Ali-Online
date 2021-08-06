@@ -10,18 +10,18 @@
   display: flex;
   align-items: center;
 }
-.name {
-  font-family: "Tangerine", cursive;
+.sign {
+  user-select: none;
+  cursor: help;
   position: absolute;
-  left: 15px;
-  color: #2b2b2b;
-  font-size: 25px;
-  cursor: default;
+  margin-left: 15px;
+  width: 100px;
 }
 .date {
   width: fit-content;
   position: absolute;
-  right: 15px;
+  right: 0;
+  margin-right: 15px;
   font-size: 16px;
   font-weight: 400;
   color: #2b2b2b;
@@ -57,6 +57,9 @@
     margin-top: 50px;
   }
   .date {
+    margin-left: 15px;
+    right: initial;
+    left: 0;
     word-spacing: -2px;
     left: calc(30px + 15px + 47px + 20px);
   }

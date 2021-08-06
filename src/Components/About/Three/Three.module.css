@@ -5,6 +5,7 @@
   top: calc(200px - 5px);
   left: calc(275px + 136px + 50px);
   z-index: 10;
+  background: black;
 }
 .hoverDiv {
   position: absolute;

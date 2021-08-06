@@ -1,4 +1,5 @@
 import styles from "./Footer.module.css";
+import sign from "../Contents/assets/sign.svg";
 const Footer = () => {
   const scrollToTop = () => {
     window.scrollTo({
@@ -8,7 +9,7 @@ const Footer = () => {
   };
   return (
     <div className={styles.footer}>
-      <h1 className={styles.name}>Rasul Ali</h1>
+      <img src={sign} alt="Rasul Ali" className={styles.sign} />
       <h1 className={styles.date}>3 Aug 2021</h1>
       <div onClick={scrollToTop} className={styles.arrowDiv}>
         <svg viewBox="0 0 20 20" fill="none">

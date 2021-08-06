@@ -2,17 +2,9 @@ import Logo from "../Contents/Logo/Logo";
 import Divider from "./Divider";
 import styles from "./Navbar.module.css";
 import NavTagWrapper from "./NavTagWrapper";
-import { useEffect, useState } from "react";
 const Navbar = () => {
-  const [Width, setWidth] = useState(window.innerWidth);
-  useEffect(() => {
-    setWidth(window.innerWidth);
-  }, []);
   return (
-    <div
-      className={styles.navbar}
-      style={Width > 574 ? { width: Width } : { width: "100%" }}
-    >
+    <div className={styles.navbar}>
       <Logo />
       <NavTagWrapper />
       <Divider />

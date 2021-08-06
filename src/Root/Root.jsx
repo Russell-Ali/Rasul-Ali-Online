@@ -6,7 +6,6 @@ import styles from "./Root.module.css";
 import Footer from "../Components/Footer/Footer";
 import Three from "../Components/About/Three/Three";
 const Root = () => {
-  console.log(window.innerWidth);
   return (
     <div className={styles.canvas}>
       <Router>

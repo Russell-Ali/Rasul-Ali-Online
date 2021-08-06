@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
 import gsap from "gsap";
 
@@ -30,24 +30,26 @@ export const LinesSvg = () => {
 export const CircleSvg = () => {
   const tlCircle = gsap.timeline();
   const ref = useRef();
-  function Clicked() {
+  const Clicked = () => {
     const Circle = ref.current;
-    tlCircle
-      .to(Circle, {
-        rotationX: "-25",
-        rotateY: "-10",
-        duration: 0.1,
-        ease: "sine.out",
-      })
-      .to(Circle, { rotationX: 0, rotateY: 0, duration: 0.1, ease: "linear" })
-      .to(Circle, { y: 38, duration: 1, ease: "bounce.out" })
-      .to(Circle, {
-        y: 0,
-        duration: 1,
-        ease: "elastic.out",
-        delay: 0.6,
-      });
-  }
+    if (!tlCircle.isActive()) {
+      tlCircle
+        .to(Circle, {
+          rotationX: "-25",
+          rotateY: "-10",
+          duration: 0.1,
+          ease: "sine.out",
+        })
+        .to(Circle, { rotationX: 0, rotateY: 0, duration: 0.1, ease: "linear" })
+        .to(Circle, { y: 38, duration: 1, ease: "bounce.out" })
+        .to(Circle, {
+          y: 0,
+          duration: 1,
+          ease: "elastic.out",
+          delay: 0.6,
+        });
+    }
+  };
   return (
     <svg
       onClick={Clicked}
