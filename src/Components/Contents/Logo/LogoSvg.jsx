@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import gsap from "gsap";
 
@@ -71,34 +71,35 @@ export const CircleSvg = () => {
   );
 };
 export const AroundSvg = () => {
+  const Length = 628.3203125;
   const ref = useRef();
   const ref2 = useRef();
   useEffect(() => {
     const pathSvg = ref.current;
     const aroundSvg = ref2.current;
+    console.log(Length);
     const tlPath = gsap.timeline({ repeat: -1, repeatDelay: 3 });
     const tlAround = gsap.timeline({ repeat: -1 });
     tlAround.to(aroundSvg, {
       rotateZ: "+=360",
       duration: 6,
-      ease: "sine.inOut",
+      ease: "sine.out",
     });
     tlPath
       .to(pathSvg, {
-        strokeDashoffset: "+=419",
+        strokeDashoffset: `+=${Length * (2 / 3)}`,
         duration: 2,
         ease: "linear",
       })
       .to(pathSvg, {
-        strokeDashoffset: "+=629",
-        duration: 2,
+        strokeDashoffset: `+=${Length}`,
+        duration: 3,
         ease: "linear",
       })
       .to(pathSvg, {
-        strokeDashoffset: "+=210",
+        strokeDashoffset: `+=${Length / 3}`,
         duration: 1,
         ease: "linear",
-        delay: "-.1",
       });
   });
   return (
@@ -117,8 +118,8 @@ export const AroundSvg = () => {
           d="M10 110C10 136.522 20.5357 161.957 39.2893 180.711C58.043 199.464 83.4784 210 110 210C136.522 210 161.957 199.464 180.711 180.711C199.464 161.957 210 136.522 210 110C210 83.4784 199.464 58.043 180.711 39.2893C161.957 20.5357 136.522 10 110 10C83.4784 10 58.043 20.5357 39.2893 39.2893C20.5357 58.043 10 83.4784 10 110"
           stroke="#000000"
           strokeWidth="3"
-          strokeDasharray="628"
-          strokeDashoffset="210"
+          strokeDasharray={Length}
+          strokeDashoffset={Length / 3}
         />
       </g>
     </svg>

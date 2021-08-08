@@ -10,7 +10,7 @@
 
 # Clean All The console.log at the end!
 
-# Add Weather Info of Baku in to the right side of the site. Use Minimal styling for clouds sun and stuff, And get the api from AccuWeather or something! It Would Be Great!!!
+# Add tools that made possible this site to the right blank side of the page, for mobile you can use them as footer to the about page.
 
 Keep working on animations of logo and available button;
 import more 3d effects one for available button definitely

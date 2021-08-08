@@ -1,17 +1,8 @@
-.tempDiv {
+.canvas {
   position: absolute;
-  width: 240px;
-  height: 60px;
-  top: calc(200px - 5px);
-  left: calc(275px + 136px + 50px);
-  z-index: 10;
-  background: black;
-}
-.hoverDiv {
-  position: absolute;
-  background: rgba(0, 0, 0, 0.1);
+  /* background: rgba(0, 0, 0, 0.1); */
   width: 300px;
   height: 225px;
   left: calc(275px + 136px + 50px - 30px);
-  top: calc(15px);
+  top: calc(115px);
 }

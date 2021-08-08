@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
+@import "../../Root/Colors.css";
 body,
 p,
 h1,
@@ -7,7 +7,6 @@ div {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  --txt-clr: #2b2b2b;
 }
 
 .textWrapper {
@@ -24,6 +23,22 @@ div {
   left: 275px;
   top: calc(25px + 100px - 24px); /*121px*/
   color: var(--txt-clr);
+  animation: popOutName 300ms ease-out;
+  transform-origin: top;
+}
+@keyframes popOutName {
+  0% {
+    transform: scale(1.2);
+  }
+  25% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .paragraphBig {
@@ -33,6 +48,7 @@ div {
   top: calc(250px + 12px); /*262px*/
   color: var(--txt-clr);
   font-size: 20px;
+  animation: slideInRightParagraph 200ms ease-out;
 }
 .paragraphMid {
   font-size: 20px;
@@ -41,15 +57,41 @@ div {
   width: 400px;
   top: calc(263px + 192px + 50px); /*505px*/
   color: var(--txt-clr);
+  animation: slideInRightParagraph 200ms ease-out;
 }
-
+@keyframes slideInRightParagraph {
+  from {
+    transform: translateX(10px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
 .divider {
   position: absolute;
   left: 112.5px;
   top: 250px;
-  height: 0px;
+  height: 1px;
   width: 25px;
-  outline: 1px solid var(--txt-clr);
+  background: var(--txt-clr);
+  animation: slideInLeftDivider 200ms ease-out;
+}
+.divider2 {
+  position: absolute;
+  left: 112.5px;
+  top: 300px;
+  width: 25px;
+  height: 1px;
+  background: var(--txt-clr);
+  animation: slideInLeftDivider 200ms ease-out;
+}
+@keyframes slideInLeftDivider {
+  from {
+    transform: translateX(-10px);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 .paragraphMail {
   background-color: rgba(43, 43, 43, 0.2);
@@ -62,21 +104,25 @@ div {
   width: 210px;
   height: 25px;
   border-radius: 15px;
+  animation: slideInLeftMail 200ms ease-out;
+  transform-origin: center;
+  font-size: 16px;
+}
+@keyframes slideInLeftMail {
+  from {
+    transform: translateX(-10px);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 #clicked {
   background: transparent;
-  border: 2px solid #29bf12;
-  color: #29bf12;
+  border: 2px solid var(--green-clr);
+  color: var(--green-clr);
   line-height: 21px;
 }
-.divider2 {
-  position: absolute;
-  left: 112.5px;
-  top: 300px;
-  height: 0px;
-  width: 25px;
-  outline: 1px solid var(--txt-clr);
-}
+
 .paragraphSocial {
   user-select: none;
   display: flex;
@@ -91,32 +137,66 @@ div {
   height: 100px;
   text-align: center;
   font-family: "Poppins", sans-serif;
+  animation: slideInLeftSocial 200ms ease-out;
+}
+@keyframes slideInLeftSocial {
+  from {
+    transform: translateX(-10px);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 .paragraphSocial a {
   text-decoration: none;
   color: var(--txt-clr);
+  transition: color 200ms ease-out;
+}
+.paragraphSocial a:hover,
+.paragraphSocial a:focus {
+  color: var(--hover-clr);
 }
 @media screen and (max-width: 574px) {
   .divider {
     display: none;
   }
+  .textWrapper {
+    display: flex;
+    justify-content: center;
+  }
   .paragraphMail {
     top: calc(250px + 25px);
     left: initial;
-    left: 50%;
-    transform: translateX(-50%);
+    animation: slideInUpMail 200ms ease-out;
+  }
+  @keyframes slideInUpMail {
+    from {
+      transform: translateY(-10px);
+    }
+    to {
+      transform: translateY(0);
+    }
   }
   .divider2 {
-    top: calc(320px + 75px);
-    left: 50%;
-    transform: translateX(-50%);
+    inset: initial;
+    animation: none;
+    top: calc(320px);
     width: 100px;
   }
   .paragraphSocial {
+    width: unset;
+    height: unset;
     inset: initial;
-    top: calc(395px + 0px);
-    left: 50%;
-    transform: translateX(-50%);
+    top: calc(320px);
+    animation: slideInUpSocial 200ms ease-out;
+  }
+  @keyframes slideInUpSocial {
+    from {
+      transform: translateY(10px);
+    }
+    to {
+      transform: translateY(0);
+    }
   }
   .heading {
     color: #000;
@@ -125,8 +205,6 @@ div {
     display: initial;
     inset: initial;
     top: calc(250px - 25px);
-    left: 50%;
-    transform: translateX(-50%);
     font-size: 32px;
     text-shadow: 0 1px 0 #e0e0e0, 0 2px 0 #dddddd, 0 3px 0 #cfcfcf,
       0 4px 0 #cdcdcd, 0 5px 0 #bebebe, 0 6px 1px rgba(20, 20, 20, 0.1),
@@ -139,16 +217,24 @@ div {
     display: initial;
     inset: initial;
     top: calc(320px + 75px + 125px);
-    left: 25px;
     width: calc(100% - 50px);
+    animation: slideInUpParagraph 200ms ease-out;
   }
   .paragraphMid {
     text-align: center;
     display: initial;
     inset: initial;
     top: calc(395px + 240px + 25px + 125px);
-    left: 25px;
     width: calc(100% - 50px);
     padding-bottom: 50px;
+    animation: slideInUpParagraph 200ms ease-out;
+  }
+  @keyframes slideInUpParagraph {
+    from {
+      transform: translateY(10px);
+    }
+    to {
+      transform: translateY(0);
+    }
   }
 }

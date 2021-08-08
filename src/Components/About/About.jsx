@@ -4,7 +4,7 @@ import CircleA from "./CircleA";
 const About = () => {
   return (
     <div className={styles.aboutDiv}>
-      <CircleA url="https://placeimg.com/200/200/animals" />
+      <CircleA url="" />
       <AboutText />
     </div>
   );
