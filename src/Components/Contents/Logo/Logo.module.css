@@ -1,3 +1,5 @@
+@import "../../../Root/Colors.css";
+
 .logo {
   position: absolute;
   top: 27px;
@@ -7,12 +9,34 @@
   transform-origin: 25px 8px;
   z-index: 1;
 }
+.logo g {
+  transition: stroke 200ms ease-out;
+  stroke: var(--txt-clr);
+}
+.logoWrapper:hover .logo g {
+  stroke: var(--hover-clr);
+}
+.logo circle {
+  transition: stroke 200ms ease-out;
+  stroke: var(--txt-clr);
+}
+.logoWrapper:hover .logo circle {
+  stroke: var(--hover-clr);
+}
 .logoWrapper {
   width: 100px;
   height: 100%;
 }
+
 .around {
   position: absolute;
   width: 100px;
   height: 100px;
+}
+.around g {
+  transition: stroke 200ms ease-out;
+  stroke: var(--txt-clr);
+}
+.logoWrapper:hover .around g {
+  stroke: var(--hover-clr);
 }

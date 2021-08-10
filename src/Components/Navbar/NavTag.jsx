@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "./NavTag.module.css";
 const NavTag = (props) => {
-  const [active, setActive] = useState(true);
+  const [active] = useState(true);
   return (
     <div>
       <h1 className={styles.tag}>{props.TAG}</h1>

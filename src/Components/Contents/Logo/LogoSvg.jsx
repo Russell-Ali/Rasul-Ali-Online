@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
 import gsap from "gsap";
 
@@ -14,15 +14,9 @@ export const LinesSvg = () => {
           y1="211"
           x2="33.0239"
           y2="9"
-          stroke="black"
           strokeWidth="5"
         />
-        <path
-          id="Z"
-          d="M34 10.1413L184.093 209.761"
-          stroke="black"
-          strokeWidth="5"
-        />
+        <path id="Z" d="M34 10.1413L184.093 209.761" strokeWidth="5" />
       </g>
     </svg>
   );
@@ -64,7 +58,6 @@ export const CircleSvg = () => {
         cy="85.9996"
         r="75"
         fill="none"
-        stroke="black"
         strokeWidth="5"
       />
     </svg>
@@ -77,7 +70,6 @@ export const AroundSvg = () => {
   useEffect(() => {
     const pathSvg = ref.current;
     const aroundSvg = ref2.current;
-    console.log(Length);
     const tlPath = gsap.timeline({ repeat: -1, repeatDelay: 3 });
     const tlAround = gsap.timeline({ repeat: -1 });
     tlAround.to(aroundSvg, {
@@ -116,7 +108,6 @@ export const AroundSvg = () => {
           ref={ref}
           className={styles.path}
           d="M10 110C10 136.522 20.5357 161.957 39.2893 180.711C58.043 199.464 83.4784 210 110 210C136.522 210 161.957 199.464 180.711 180.711C199.464 161.957 210 136.522 210 110C210 83.4784 199.464 58.043 180.711 39.2893C161.957 20.5357 136.522 10 110 10C83.4784 10 58.043 20.5357 39.2893 39.2893C20.5357 58.043 10 83.4784 10 110"
-          stroke="#000000"
           strokeWidth="3"
           strokeDasharray={Length}
           strokeDashoffset={Length / 3}

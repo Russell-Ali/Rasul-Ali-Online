@@ -13,7 +13,6 @@
 }
 .sign {
   user-select: none;
-  cursor: help;
   position: absolute;
   margin-left: 15px;
   width: 100px;
@@ -46,6 +45,7 @@
 }
 .arrow {
   fill: var(--txt-clr);
+  transition: all 200ms ease-out;
 }
 .arrowDiv:hover .arrow {
   fill: var(--hover-clr);
