@@ -47,7 +47,7 @@
   fill: var(--txt-clr);
   transition: all 200ms ease-out;
 }
-@media screen and (min-width: 574px) {
+@media screen and (min-width: 575px) {
   .arrowDiv:hover .arrow {
     fill: var(--hover-clr);
   }

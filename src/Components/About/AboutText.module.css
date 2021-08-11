@@ -152,7 +152,7 @@ div {
   color: var(--txt-clr);
   transition: color 200ms ease-out;
 }
-@media screen and (min-width: 574px) {
+@media screen and (min-width: 575px) {
   .paragraphSocial a:hover,
   .paragraphSocial a:focus {
     color: var(--hover-clr);
@@ -228,7 +228,6 @@ div {
     inset: initial;
     top: calc(395px + 240px + 25px + 125px);
     width: calc(100% - 50px);
-    padding-bottom: 50px;
     animation: slideInUpParagraph 200ms ease-out;
   }
   @keyframes slideInUpParagraph {

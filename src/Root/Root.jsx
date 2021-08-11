@@ -4,7 +4,6 @@ import About from "../Components/About/About";
 import Navbar from "../Components/Navbar/Navbar";
 import styles from "./Root.module.css";
 import Footer from "../Components/Footer/Footer";
-import Three from "../Components/About/Three/Three";
 const Root = () => {
   return (
     <div className={styles.canvas}>
@@ -15,7 +14,6 @@ const Root = () => {
           <Route path="/about" component={About} />
         </Switch>
         <Route path="/" component={Footer} exact />
-        {/* <Route path="/about" exact component={Three} /> */}
       </Router>
     </div>
   );
