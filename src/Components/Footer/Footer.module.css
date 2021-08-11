@@ -47,7 +47,12 @@
   fill: var(--txt-clr);
   transition: all 200ms ease-out;
 }
-.arrowDiv:hover .arrow {
+@media screen and (min-width: 574px) {
+  .arrowDiv:hover .arrow {
+    fill: var(--hover-clr);
+  }
+}
+.arrowDiv:focus .arrow {
   fill: var(--hover-clr);
 }
 @keyframes float {

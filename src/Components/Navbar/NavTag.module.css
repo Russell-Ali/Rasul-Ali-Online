@@ -19,10 +19,18 @@
   transform-origin: right;
   animation: slideInLeft 200ms ease-out;
 }
-.tag:hover {
+@media screen and (min-width: 574px) {
+  .tag:hover {
+    color: var(--hover-clr);
+  }
+  .tag:hover ~ .underline {
+    background: var(--hover-clr);
+  }
+}
+.tag:focus {
   color: var(--hover-clr);
 }
-.tag:hover ~ .underline {
+.tag:focus ~ .underline {
   background: var(--hover-clr);
 }
 @keyframes slideInLeft {

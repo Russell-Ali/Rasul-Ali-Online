@@ -12,14 +12,27 @@
     0px 9px 46px 8px rgba(0, 0, 0, 0.12), 0px 11px 15px -7px rgba(0, 0, 0, 0.2);
   transition: transform 200ms ease-out;
 }
-.circleDiv:hover {
+.circleImg:focus {
   transform: scale(1.2);
 }
-
-.circleDiv:hover h1 {
+.circleDiv:focus h1 {
   transform: translateY(-100%);
 }
+@media screen and (min-width: 574px) {
+  .circleDiv:hover {
+    transform: scale(1.2);
+  }
 
+  .circleDiv:hover h1 {
+    transform: translateY(-100%);
+  }
+  .circleDiv h1 {
+    pointer-events: none;
+  }
+  .circleDiv:hover .circleImg {
+    filter: grayscale(0);
+  }
+}
 @keyframes slideInUp {
   from {
     transform: translateX(-20px);
@@ -32,6 +45,23 @@
   .circleDiv {
     margin: 25px;
   }
+  .circleDiv:hover,
+  .circleDiv:active {
+    transform: scale(1.2) translateX(10px);
+  }
+  .circleDiv:hover h1,
+  .circleDiv:active h1 {
+    font-size: 24px;
+    transform: scale(0.833333) translateX(-16px) skew(-20deg);
+  }
+  .circleDiv:hover .circleImg,
+  .circleDiv:active .circleImg {
+    filter: grayscale(0);
+  }
+  .circleDiv:hover h1,
+  .circleDiv:active h1 {
+    color: var(--hover-clr);
+  }
 }
 .circleImg {
   width: 200px;
@@ -40,6 +70,7 @@
   filter: grayscale(100%);
   transition: filter 400ms ease-out;
 }
-.circleDiv:hover .circleImg {
+
+.circleDiv:focus .circleImg {
   filter: grayscale(0);
 }

@@ -14,7 +14,7 @@
   margin: 0;
   box-sizing: border-box;
   animation: slideInLeft 200ms ease-out;
-  transition: transform 200ms ease-out;
+  transition: all 200ms ease-out;
 }
 @keyframes slideInLeft {
   from {
