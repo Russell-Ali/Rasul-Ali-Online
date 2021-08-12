@@ -1,11 +1,13 @@
 @import "./Colors.css";
+html {
+  background: url(../Components/Contents/assets/linedpaper.png);
+}
 .canvas {
   width: 100vw;
   min-height: 100vh;
   position: relative;
   top: 0;
   left: 0;
-  background: url(../Components/Contents/assets/linedpaper.png);
 }
 body::-webkit-scrollbar {
   width: 6px;

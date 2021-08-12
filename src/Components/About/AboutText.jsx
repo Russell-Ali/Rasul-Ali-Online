@@ -17,7 +17,6 @@ const AboutText = () => {
   const [isHover, setIsHover] = useState(0);
   function clicked() {
     if (navigator.clipboard && window.isSecureContext) {
-      console.log("🤩clicked");
       setIsHover(2);
       setIsClicked("clicked");
       navigator.clipboard.writeText(contactMe.mail);
@@ -25,21 +24,17 @@ const AboutText = () => {
         setIsHover(0);
         setIsClicked("");
       }, 500);
-    } else {
-      console.log("nope");
     }
   }
   function hovering() {
     if (Width <= 574) {
     } else if (navigator.clipboard && window.isSecureContext) {
-      console.log("😃hovering...");
       setIsHover(1);
     }
   }
   function left() {
     if (Width <= 574) {
     } else if (navigator.clipboard && window.isSecureContext) {
-      console.log("left😢");
       setTimeout(() => setIsHover(0), 300);
     }
   }

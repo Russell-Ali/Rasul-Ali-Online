@@ -226,7 +226,7 @@ div {
     text-align: center;
     display: initial;
     inset: initial;
-    top: calc(395px + 240px + 25px + 125px);
+    top: calc(395px + 240px + 150px);
     width: calc(100% - 50px);
     animation: slideInUpParagraph 200ms ease-out;
   }
@@ -237,5 +237,10 @@ div {
     to {
       transform: translateY(0);
     }
+  }
+}
+@media screen and (max-width: 350px) {
+  .paragraphMid {
+    top: calc(395px + 240px + 150px + 35px);
   }
 }
