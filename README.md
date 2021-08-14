@@ -3,7 +3,8 @@
 # Hi, welcome.
 This project is currently deployed to [rasulali.tk](https://rasulali.tk/)
 But depending on the time you see this, the domain could host another version of this website.
- I provided some screenshots at the bottom :
+<br />
+I provided some screenshots at the bottom :
 
 # Homepage 
 ![main-1](https://user-images.githubusercontent.com/82474455/129462300-ecde3b8f-1bd7-4037-8ea6-fc3b95a7d304.png)
