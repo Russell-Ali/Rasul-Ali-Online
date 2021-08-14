@@ -6,13 +6,13 @@ const NavTagWrapper = () => {
   const location = useLocation();
   return (
     <div className={styles.wrapper}>
-      <Link to="/">
+      <Link to="/" style={{ outline: "none" }}>
         <NavTag
-          TAG="projects"
+          TAG="locations"
           visible={location.pathname === "/" ? true : false}
         />
       </Link>
-      <Link to="/about">
+      <Link to="/about" style={{ outline: "none" }}>
         <NavTag
           TAG="about me"
           visible={location.pathname === "/about" ? true : false}

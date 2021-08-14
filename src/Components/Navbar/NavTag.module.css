@@ -27,12 +27,7 @@
     background: var(--hover-clr);
   }
 }
-.tag:focus {
-  color: var(--hover-clr);
-}
-.tag:focus ~ .underline {
-  background: var(--hover-clr);
-}
+
 @keyframes slideInLeft {
   from {
     transform: scaleX(0);

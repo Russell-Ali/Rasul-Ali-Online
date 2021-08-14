@@ -48,13 +48,13 @@
   transition: all 200ms ease-out;
 }
 @media screen and (min-width: 575px) {
-  .arrowDiv:hover .arrow {
+  .arrowDiv:hover .arrow,
+  .arrowDiv:focus .arrow {
+    outline: none;
     fill: var(--hover-clr);
   }
 }
-.arrowDiv:focus .arrow {
-  fill: var(--hover-clr);
-}
+
 @keyframes float {
   0% {
     transform: translateY(-1px);

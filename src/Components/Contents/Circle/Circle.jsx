@@ -5,7 +5,9 @@ const Circle = (props) => {
     <>
       <div className={styles.circleDiv}>
         <CircleTag tag={props.Tag} />
-        <img src={props.url} alt="😶" className={styles.circleImg} />
+        <a href={props.href} target="_blank" rel="noopener noreferrer">
+          <img src={props.url} alt="😶" className={styles.circleImg} />
+        </a>
       </div>
     </>
   );

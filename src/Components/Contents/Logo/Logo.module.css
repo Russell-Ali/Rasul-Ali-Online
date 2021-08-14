@@ -10,13 +10,20 @@
   z-index: 1;
 }
 @media screen and (min-width: 575px) {
-  .logoWrapper:hover .logo g {
+  .logoWrapper:hover .logo g,
+  .logoWrapper:focus .logo g {
+    outline: none;
+
     stroke: var(--hover-clr);
   }
-  .logoWrapper:hover .logo circle {
+  .logoWrapper:hover .logo circle,
+  .logoWrapper:focus .logo circle {
+    outline: none;
     stroke: var(--hover-clr);
   }
-  .logoWrapper:hover .around g {
+  .logoWrapper:hover .around g,
+  .logoWrapper:focus .around g {
+    outline: none;
     stroke: var(--hover-clr);
   }
 }
@@ -25,17 +32,11 @@
   stroke: var(--txt-clr);
 }
 
-.logoWrapper:focus .logo g {
-  stroke: var(--hover-clr);
-}
 .logo circle {
   transition: stroke 200ms ease-out;
   stroke: var(--txt-clr);
 }
 
-.logoWrapper:focus .logo circle {
-  stroke: var(--hover-clr);
-}
 .logoWrapper {
   width: 100px;
   height: 100%;
@@ -49,8 +50,4 @@
 .around g {
   transition: stroke 200ms ease-out;
   stroke: var(--txt-clr);
-}
-
-.logoWrapper:focus .around g {
-  stroke: var(--hover-clr);
 }

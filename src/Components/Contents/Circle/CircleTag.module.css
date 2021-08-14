@@ -15,6 +15,7 @@
   box-sizing: border-box;
   animation: slideInLeft 200ms ease-out;
   transition: all 200ms ease-out;
+  pointer-events: none;
 }
 @keyframes slideInLeft {
   from {
@@ -26,15 +27,19 @@
 }
 @media screen and (max-width: 574px) {
   .circleTagH1 {
-    width: fit-content;
     line-height: initial;
-    height: initial;
+    width: unset;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    height: 200px;
     padding: 0;
-    top: calc(100px - 24px);
-    left: 100%;
-    margin-left: 25px;
+    top: 0;
+    left: 130%;
     font-weight: 500;
-    font-size: 32px;
-    text-align: left;
+    font-size: 5vw;
+    text-align: center;
+    pointer-events: unset;
+    border: 3px double var(--txt-clr);
+    border-radius: 20px;
   }
 }

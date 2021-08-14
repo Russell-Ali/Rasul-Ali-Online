@@ -8,7 +8,15 @@ div {
   padding: 0;
   box-sizing: border-box;
 }
-
+h1::selection,
+p::selection,
+a::selection {
+  background: var(--txt-clr);
+  color: #fafafa;
+}
+#github::selection {
+  color: var(--hover-clr);
+}
 .textWrapper {
   font-family: "Dancing Script", cursive;
   position: absolute;
@@ -26,6 +34,7 @@ div {
   animation: popOutName 300ms ease-out;
   transform-origin: top;
 }
+
 @keyframes popOutName {
   0% {
     transform: scale(1.2);
@@ -50,6 +59,13 @@ div {
   font-size: 20px;
   animation: slideInRightParagraph 200ms ease-out;
 }
+.paragraphBig a {
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--hover-clr);
+  transition: all 200ms ease-out;
+}
+
 .paragraphMid {
   font-size: 20px;
   position: absolute;
@@ -106,7 +122,9 @@ div {
   border-radius: 15px;
   animation: slideInLeftMail 200ms ease-out;
   transform-origin: center;
-  font-size: 16px;
+  font-size: 14px;
+  letter-spacing: -1px;
+  padding: 1px 0;
 }
 @keyframes slideInLeftMail {
   from {
@@ -124,7 +142,6 @@ div {
 }
 
 .paragraphSocial {
-  user-select: none;
   display: flex;
   flex-direction: column;
   margin: 0;
@@ -155,7 +172,13 @@ div {
 @media screen and (min-width: 575px) {
   .paragraphSocial a:hover,
   .paragraphSocial a:focus {
+    outline: none;
     color: var(--hover-clr);
+  }
+  .paragraphBig a:hover,
+  .paragraphBig a:focus {
+    outline: none;
+    color: var(--txt-clr);
   }
 }
 @media screen and (max-width: 574px) {

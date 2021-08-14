@@ -25,6 +25,7 @@ const Credits = () => {
           href="https://reactjs.org/"
           target="_blank"
           rel="noopener noreferrer"
+          style={{ outline: "none" }}
         >
           <React
             class={`${styles.logos} ${styles.react}`}
@@ -33,6 +34,7 @@ const Credits = () => {
           />
         </a>
         <a
+          style={{ outline: "none" }}
           href="https://greensock.com/gsap/"
           target="_blank"
           rel="noopener noreferrer"

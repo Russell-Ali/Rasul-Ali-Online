@@ -12,24 +12,27 @@
     0px 9px 46px 8px rgba(0, 0, 0, 0.12), 0px 11px 15px -7px rgba(0, 0, 0, 0.2);
   transition: transform 200ms ease-out;
 }
-.circleImg:focus {
-  transform: scale(1.2);
+.circleDiv a {
+  outline: none;
 }
-.circleDiv:focus h1 {
-  transform: translateY(-100%);
-}
+
 @media screen and (min-width: 575px) {
-  .circleDiv:hover {
+  .circleDiv:hover,
+  .circleImg:focus {
+    outline: none;
     transform: scale(1.2);
   }
-
-  .circleDiv:hover h1 {
-    transform: translateY(-100%);
+  .circleDiv:hover h1,
+  .circleDiv:focus h1 {
+    outline: none;
+    transform: translateY(-100%) scale(0.5);
   }
   .circleDiv h1 {
     pointer-events: none;
   }
-  .circleDiv:hover .circleImg {
+  .circleDiv:hover .circleImg,
+  .circleDiv:focus .circleImg {
+    outline: none;
     filter: grayscale(0);
   }
 }
@@ -52,25 +55,20 @@
   .circleDiv:hover h1,
   .circleDiv:active h1 {
     font-size: 24px;
-    transform: scale(0.833333) translateX(-16px) skew(-20deg);
+    transform: scale(0.65) translateX(-16px);
+    color: var(--hover-clr);
+    border-color: var(--hover-clr);
   }
   .circleDiv:hover .circleImg,
   .circleDiv:active .circleImg {
     filter: grayscale(0);
   }
-  .circleDiv:hover h1,
-  .circleDiv:active h1 {
-    color: var(--hover-clr);
-  }
 }
 .circleImg {
+  pointer-events: none;
   width: 200px;
   height: 200px;
   border-radius: 50%;
   filter: grayscale(100%);
   transition: filter 400ms ease-out;
-}
-
-.circleDiv:focus .circleImg {
-  filter: grayscale(0);
 }

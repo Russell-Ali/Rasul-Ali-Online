@@ -1,8 +1,10 @@
 import styles from "./AboutText.module.css";
 import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSmileBeam, faLaughBeam } from "@fortawesome/free-regular-svg-icons";
 const AboutText = () => {
   const contactMe = {
-    mail: "rasul.mail.00@mail.com",
+    mail: "rasul.aliyev2000@outlook.com",
     message: "Click To Copy",
     click: "Copied",
   };
@@ -42,17 +44,28 @@ const AboutText = () => {
     <div className={styles.textWrapper}>
       <h1 className={styles.heading}>Rasul Ali</h1>
       <p className={styles.paragraphBig}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
-        omnis, natus enim dolore corrupti assumenda veritatis distinctio illo
-        aliquam? Fugit, consectetur sit dolorum, aperiam repellat dignissimos ab
-        temporibus totam cumque eveniet maxime quae perferendis a delectus illum
-        non iusto veniam architecto cum reprehenderit recusandae. Ullam corrupti
-        modi necessitatibus possimus cumque.
+        Hi, welcome to my humble page. Originally I thought to make this in as a
+        portfolio. But because I haven't done many big projects to fulfill
+        potential employers I stumbled upon that idea which you see right now.
+        Nonetheless, if you feel like giving me chance, first of all, thank you.
+        <FontAwesomeIcon icon={faSmileBeam} style={{ fontSize: "14" }} />{" "}
+        Secondly, you can check my
+        <a
+          href="https://github.com/Russell-Ali"
+          target="_blank"
+          rel="noopener noreferrer"
+          id={styles.github}
+        >
+          {" Github "}
+        </a>
+        page. Depending on the time you visit it, the number of projects here
+        may have changed.
       </p>
       <p className={styles.paragraphMid}>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos dolores
-        provident rerum necessitatibus quas ullam optio suscipit, possimus est
-        quia.
+        I hope you enjoyed this concept. If the social media links you see do
+        not go to my page that means I still didn't create one. But email is
+        real, don't worry.
+        <FontAwesomeIcon icon={faLaughBeam} style={{ fontSize: "14" }} />
       </p>
       <span className={styles.divider}></span>
       <p
