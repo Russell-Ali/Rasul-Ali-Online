@@ -1,4 +1,5 @@
-# Rasul-Ali-Online
+# Hi, welcome.
+
 This project is currently deployed to [rasulali.tk](https://rasulali.tk/)
 But depending on the time you see this, the domain could host another version of this page.
 I provided some screenshots from the page :
@@ -11,3 +12,5 @@ I provided some screenshots from the page :
 # About Page
 
 ![about](https://user-images.githubusercontent.com/82474455/129462312-94671de6-defb-437d-943b-e0bee8bff21d.png)
+
+Thank you for your visit, take care!
